@@ -8,6 +8,3 @@ Mais probleme
 2.la mise en placeun bouton like pour chaque article 
 3.la mise en place d'un système de inscription et de connexion
 
-Information
------------
-Je précise que je ne suis pas un professionnelle je me débrouille à peut pres avec le HTML css mais le Php et assez complexe je me suis aidé de code que j'ai trouvé sur le web que j'ai adapté à mon blog.
