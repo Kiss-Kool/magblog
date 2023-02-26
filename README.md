@@ -6,7 +6,7 @@ MagBlog est un blog et épuré, conçu pour ceux qui recherchent a crée un simp
 Problème
 -------------
 1.la mise en place une pagination 
-2.la mise en placeun bouton like pour chaque article 
+2.la mise en place d'un bouton like pour chaque article 
 3.la mise en place d'un système de inscription et de connexion
 
 
