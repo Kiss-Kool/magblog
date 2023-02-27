@@ -31,7 +31,7 @@ display:none;
 }
 
 .article .contenu {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.5;
     margin-top: 10px;
  
@@ -66,6 +66,7 @@ h4 {
     color: #000000;
     margin: auto;
     margin-top: 10px;
+    font-size: 19px;
 }
 
 h3 {
@@ -92,6 +93,7 @@ header {
     height: 50px;
     width: 66.8%;
     margin: auto;
+    box-shadow: rgba(0,0,0,.16) 1px 10px 9px;
 }
 
 header h1 {
@@ -110,6 +112,7 @@ nav {
     padding: 10px 20px;
     width: 66.8%;
     margin: auto;
+    box-shadow: rgba(0,0,0,.16) 1px 10px 9px;
 }
 
 nav ul {
@@ -224,6 +227,7 @@ footer {
     margin: auto;
     text-align: center;
     font-size: .875rem;
+    text-transform: uppercase;
 }
 
 img {
