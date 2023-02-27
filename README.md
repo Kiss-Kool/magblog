@@ -3,7 +3,7 @@
 # MagBlog
 MagBlog est un blog et épuré, conçu pour ceux qui recherchent a crée un simple blog facile à utiliser pour partager leur contenu en ligne. Avec une mise en page épurée et un design minimaliste.
 
-Problème
+A faire
 -------------
 1.la mise en place une pagination 
 2.la mise en place d'un bouton like pour chaque article 
