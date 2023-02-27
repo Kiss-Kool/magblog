@@ -5,8 +5,8 @@ MagBlog est un blog et épuré, conçu pour ceux qui recherchent a crée un simp
 
 A faire
 -------------
-1.la mise en place une pagination 
-2.la mise en place d'un bouton like pour chaque article 
+&#x2705;la mise en place d'une pagination <br>
+2.la mise en place d'un bouton like pour chaque article <br>
 3.la mise en place d'un système de inscription et de connexion
 
 
