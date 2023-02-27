@@ -36,10 +36,29 @@ header('Location: index.php');
 exit;
  
 }
+// Nombre d'articles par page
+$articles_par_page = 5;
 
-// Récupère la liste des articles
-$stmt = $pdo->query('SELECT ' . CHAMP_ID . ', ' . CHAMP_TITRE . ', ' . CHAMP_CONTENU_HTML . ', ' . CHAMP_DATE_CREATION . ' FROM ' . TABLE_ARTICLES . ' ORDER BY ' . CHAMP_DATE_CREATION . ' DESC');
+// Numéro de la page courante (défaut: 1)
+$page_courante = isset($_GET['page']) ? intval($_GET['page']) : 1;
+
+// Calculer l'offset de la première ligne à récupérer dans la base de données
+$offset = ($page_courante - 1) * $articles_par_page;
+
+// Récupérer les articles de la page courante
+$stmt = $pdo->prepare('SELECT * FROM ' . TABLE_ARTICLES . ' ORDER BY ' . CHAMP_DATE_CREATION . ' DESC LIMIT :limit OFFSET :offset');
+$stmt->bindValue(':limit', $articles_par_page, PDO::PARAM_INT);
+$stmt->bindValue(':offset', $offset, PDO::PARAM_INT);
+$stmt->execute();
 $articles = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+// Compter le nombre total d'articles
+$stmt = $pdo->prepare('SELECT COUNT(*) FROM ' . TABLE_ARTICLES);
+$stmt->execute();
+$nombre_total_articles = $stmt->fetchColumn();
+
+// Calculer le nombre total de pages
+$nombre_total_pages = ceil($nombre_total_articles / $articles_par_page);
 
 // Fonction pour convertir le BBCode en HTML
 function bbcode2html($bbcode, $bbcode_enabled) {
@@ -147,8 +166,7 @@ function bbcode2html($bbcode, $bbcode_enabled) {
 <?php include "includes/widget.php" ?>
  </section>
     </main>
-
-    <!-- Et voici notre pied de page utilisé sur toutes les pages du site -->
+ <?php include "includes/pagination.php" ?>
     <footer>
       <p>©Copyright 2023 magblog</p>
     </footer>
