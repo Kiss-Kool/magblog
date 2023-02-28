@@ -25,9 +25,9 @@ body {
 }
 
 .article .date {
-font-size: 14px;
-margin-bottom: 10px;
-display:none;
+   font-size: 14px;
+   margin-bottom: 10px;
+   display:none;
 }
 
 .article .contenu {
