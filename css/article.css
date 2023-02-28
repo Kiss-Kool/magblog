@@ -285,7 +285,7 @@ img {
 .pseudo{
 color:#54BAB9;
 }
-/*---start les reseaux sociaux---*/
+/*---start ressoc---*/
 .soc{
     color: #000000;
     margin: 10px;
@@ -300,4 +300,4 @@ color:#54BAB9;
     grid-gap: 1rem;
     margin: 10px;
 }
-/*---end les reseaux sociaux---*/
+/*---end ressoc---*/
