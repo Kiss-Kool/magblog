@@ -1,6 +1,9 @@
 <?php
 require_once 'config.php';
 
+define('TABLE_ARTICLES', 'articles');
+define('CHAMP_ID', 'id');
+
 // Récupère l'ID de l'article à afficher
 $id = $_GET['id'] ?? null;
 
@@ -72,6 +75,8 @@ $commentaires = $stmt->fetchAll(PDO::FETCH_ASSOC);
        <h2><?= htmlspecialchars($article['titre']); ?></h2>
         <div class="date"><?= htmlspecialchars($article['date_creation']); ?></div>
         <div class="contenu"><p><?= $article['contenu_html']; ?></p></div>
+
+
 </form>
         <h4>Commentaires</h4>
         <?php foreach ($commentaires as $commentaire): ?>
@@ -104,5 +109,7 @@ $commentaires = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <footer>
       <p>©Copyright 2023 magblog</p>
     </footer>
+
+
   </body>
 </html>
